@@ -1,0 +1,29 @@
+= Congratulations!
+:showtitle:
+:page-title: Blockchain - Technical and business perspective
+:page-description: This is a report compiling the study on blockchain from technical and business perspective
+
+== Introduction
+
+Blockchain, the keyword itself implied series of blocks and assumed that blocks would have some information added to them.
+The blockchain is not a strange keyword anymore in this era; everyone talks about it in their daily life.
+However, not everyone can understand blockchain clearly and explain the whole concept, so in a line, it is - "Series of blocks with linked cryptographic hashes in a chronological way."
+
+Most of the people think - Blockchain and Bitcoin[1] are same! Yes, they feel like that. Well, it's not the case they different, blockchain is an underlying concept of Bitcoin.
+Bitcoin made debut in 2009 and got attention from every tech-savvy over the globe as it was a system using blockchain and p2p network, and proposing a solution to resolve double spending problem[2] and enable borderless electronic payment transactions. It was a classic peer to peer transaction system owned and supported by the developer community and public. After 2009, when Bitcoin was struggling yet rising in the market, other incubator projects were in progress which could overcome potential problems faced in bitcoin system and provide faster transactions for electronic payment transactions. Also, tech pioneers started implementing blockchain in other fields such as real estate, healthcare, and education, etc. I will explain all these as we go through this document. 
+
+=== Blockchain origins
+
+=== The concept
+
+=== Bitcoin
+
+=== Etherium
+
+=== Others
+
+=== Complexity
+
+=== Use cases
+
+=== Handson
