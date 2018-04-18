@@ -1,4 +1,4 @@
-= Congratulations!
+= Blockchain - Technical and business perspective
 :showtitle:
 :page-title: Blockchain - Technical and business perspective
 :page-description: This is a report compiling the study on blockchain from technical and business perspective
