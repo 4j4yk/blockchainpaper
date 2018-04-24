@@ -7,7 +7,7 @@ image:https://travis-ci.org/akhampariya/blockchainpaper.svg?branch=master["Build
 
 == Introduction
 
-Blockchain, the keyword itself implied series of blocks and assumed that blocks would have some information added to them.
+Blockchain, the keyword itself implied series of blocks and assumed that blocks would have some information added to them. Distributed Ledger Technology
 The blockchain is not a strange keyword anymore in this era; everyone talks about it in their daily life.
 However, not everyone can understand blockchain clearly and explain the whole concept, so in a line, it is - "Series of blocks with linked cryptographic hashes in a chronological way."
 
@@ -16,7 +16,61 @@ Bitcoin made debut in 2009 and got attention from every tech-savvy over the glob
 
 === Blockchain origins
 
+The origins of blockchain technology can be traced to 1991 when Stuart Haber and W. Scott Stornetta represented the initial effort on a cryptographically secured series of blocks. In 1992, they took advantage of Merkle trees and combined it into the design resulting in a new enhanced system which allowed to collect several documents in a block, and several blocks are linked together building a chain.
+
+Well, that was long ago. At present, it wouldn't be wrong to say that the blockchain technology gained significance in 2008 when a mysterious person named "Satoshi Nakamoto" came up with the Bitcoin white paper. Satoshi Nakamoto proposed a practical approach to solving the problem of double spending using same blockchain technology. Another fact which still amazes people is that nobody knows who Satoshi Nakamoto was and its still a mystery.
+
 === The concept
+
+The key term is distributed ledger technology (DLT), which includes blockchain and smart contracts. Distributed ledger is a type of data structure within a block. 
+The blockchain is a chronological chain of blocks, in which each block had a set of multiple transactions and added to the chain including timestamp and cryptographic hash, ultimately providing immutable records for all the transactions. 
+
+The block contains bundled transaction records, a reference to the previous block, proof of work and timestamp. The blockchain can reside across multiple computing devices, generally spread across locations or regions to form a distributed peer to peer network and it uses consensus algorithm to provide immutability.
+
+==== Blockchain - DataStorage
+
+We will have a look at blockchain and block data depiction as below - 
+
+.Blockchain (licensed under Creative Commons Attribution-Share-Alike 3.0 Unported, retrieved from Wikipedia)"Blockchain formation. The main chain (black) consists of the longest series of blocks from the genesis block (green) to the current block. Orphan blocks (purple) exist outside of the main chain."[Wikipedia]
+
+[#img-blockchain]
+[caption="Figure 1: ",link=https://upload.wikimedia.org/wikipedia/commons/9/98/Blockchain.svg]
+image::https://upload.wikimedia.org/wikipedia/commons/9/98/Blockchain.svg[]
+
+
+.Bitcoin Block Data (licensed under Creative Commons Attribution-Share-Alike 3.0 Unported, retrieved from Wikipedia)
+[#img-blockdata]
+[caption="Figure 2: ",link=https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bitcoin_Block_Data.svg/900px-Bitcoin_Block_Data.svg.png]
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bitcoin_Block_Data.svg/900px-Bitcoin_Block_Data.svg.png[center]
+
+
+The block data gives us an overview of all the things inside a block. As you can see that block 11 contains transactions that are hashed and bundled called tx_root,  previous hash to block 10, a timestamp and nonce (proof of work). Tx_root is a Merkle tree, which contains hashes of all the transactions. 
+
+==== Blockchain - Data Distribution
+
+Distributed ledger technologies like blockchain work on the peer to peer (p2p) network models, meaning every peer has same data and updates will be applied to all of them. 
+
+This is more efficient than client-server architecture and no central control over changing states of the ledger. 
+
+
+
+.A peer-to-peer (P2P) network in which interconnected nodes ("peers") share resources amongst each other without the use of a centralized administrative system(licensed under Creative Commons Attribution-Share-Alike 3.0 Unported, retrieved from Wikipedia)
+[#img-p2p]
+[caption="Figure 3: ",link=https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg/119px-P2P-network.svg.png]
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg/119px-P2P-network.svg.png[]
+
+==== Blockchain - Consensus 
+
+The consensus is the process of achieving agreement among the network participants as to the correct state of data on the system.
+
+In the blockchain, as multiple participants are adding blocks, it may be you see different versions of the same block. For resolving these conflicts, the consensus algorithm varies with varying implementations of the blockchain. In Bitcoin, its determined by using the most extended chain rule, i.e., Proof of Work. There are others, like the Proof of Burn, Proof of Stake,  Proof of Capacity, Proof of Elapsed Time, and many others, it all depends on the unique requirements of that blockchain system.
+
+* Proof of work requires a lot of energy, and the possible threat to the blockchain system, because it can alter blockchain if some peers in the network own 51% of the ledger.
+
+==== Blockchain - Read/Write
+As its a distributed ledger, everyone, who owns a decent computer with enough power, is allowed to use the source code and read-write ledger state.
+
+However, these can be controlled based on what kind of blockchain you are using, i.e., permissioned or permissionless. Bitcoin is a permissionless blockchain technology; anyone can download and start using it.
 
 === Bitcoin
 
