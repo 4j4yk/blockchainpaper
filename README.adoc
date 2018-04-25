@@ -72,9 +72,35 @@ As its a distributed ledger, everyone, who owns a decent computer with enough po
 
 However, these can be controlled based on what kind of blockchain you are using, i.e., permissioned or permissionless. Bitcoin is a permissionless blockchain technology; anyone can download and start using it.
 
+===== Permissionless blockchain
+The permissionless blockchain is publicly owned blockchain network, where anyone and can join the network without any signup process or verification and start contributing to reading/writing process of the ledger.  Bitcoin is widely known example for such blockchain, and there are more.
+
+===== Permissioned blockchain
+The permissioned blockchain is private blockchain where membership is required in some form.  To use permissioned blockchain network, we need to meet some predefined criteria. 
+Permissioned blockchains are generally company owned. 
+
+===== Public vs Private 
+Now we know that two kinds of blockchains are there already. These can be further categorized based on the access provided to users in the network. A Permissionless blockchain may be public or private. Similarly, a permissioned blockchain can be public or private. 
+
 === Bitcoin
 
+Bitcoin, the name is well suited and catch attention from tech-savvy people. I have already discussed a little bitcoin earlier in this paper. 
+
+Bitcoin tales started in 2008 when Satoshi Nakamoto, proposed a solution to solve double spending problem and ditch central authorities those who take over the transaction from our very hands and take much time to process along with a fee.
+
+=== Why did we need it?
+
+Earlier when we did not have any currency, people used to trade stuff like crops, goods, etc. and fulfill their daily needs. But later on, the concept of currency was developed. It evolved over time and led to paper money in exchange for gold with world bank.  Later on, keeping gold was not an option anymore, and government can print currency whenever in need. Printing money wasn't a problem, but it caused to inflection and became invaluable over time. What we could purchase with 1 Unit is way costly nowadays. 
+
+Another problem was that people were stacking money in banks and banks could lend the same money up to 90% back to people. These financial institutions were acting as a central authority to circulate cash within society, and all the transactions, going through the are chargeable. This ultimate business model was efficient for financial institutions but not good for people who need privacy and security. 
+Satoshi Nakamoto, rescued us by proving a practical approach to solve these problems.
+
 === Etherium
+
+
+
+=== Zcash
+
 
 === Others
 
