@@ -61,11 +61,99 @@ image::https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg
 
 ==== Blockchain - Consensus 
 
-The consensus is the process of achieving agreement among the network participants as to the correct state of data on the system.
+The consensus is the process of achieving agreement among the network participants as to the correct state of data on the system, and it has been studied for many years from the distributed system's perspective. 
 
-In the blockchain, as multiple participants are adding blocks, it may be you see different versions of the same block. For resolving these conflicts, the consensus algorithm varies with varying implementations of the blockchain. In Bitcoin, its determined by using the most extended chain rule, i.e., Proof of Work. There are others, like the Proof of Burn, Proof of Stake,  Proof of Capacity, Proof of Elapsed Time, and many others, it all depends on the unique requirements of that blockchain system.
+In the blockchain, as multiple participants are adding blocks, it may be you see different versions of the same block. For resolving these conflicts, the consensus algorithm varies with varying implementations of the blockchain. In Bitcoin, its determined by using the most extended chain rule, i.e., Proof of Work. There are others, like the Proof of Burn, Proof of Stake,  Proof of Capacity, Proof of Elapsed Time, and many others, it all depends on the unique requirements of that blockchain system. Let's have an in-depth look into all of them - 
 
-* Proof of work requires a lot of energy, and the possible threat to the blockchain system, because it can alter blockchain if some peers in the network own 51% of the ledger.
+* Proof of work (PoW)
+PoW is used in bitcoin, and the core design is to share the accounting rights and rewards through the hashing power rivalry between the nodes in the peer network. 
+Based on the data of the prior block, the various nodes calculate the explicit solution of a mathematical problem. It’s challenging to solve the math problem. The first node that solves this math problem can produce the following block and get a specific amount of
+Bitcoin reward. 
+
+Satoshi Nakamoto studied HashCash and designed
+this mathematics problem in bitcoin. Steps in this process are as follows - 
+
+** Get the difficulty: Mining algorithm will see the hash rate of the whole network and adjust difficulty value accordingly.
+
+** Collect transactions: Bundle all pending transactions and calculate the Merkle Root of these transactions. And put this in a new block with the 256-bit hash value of the preceding block, the current target hash value, Nonce arbitrary number and other required information.
+
+** Calculating: Produce double SHA 256 in collect transactions steps by traversing the nonce number between 0 to 232 in step 2. The block can be announced if the calculated hash is less than or equal to the target value. Later verification with others nodes take place, and accounting is done. 
+
+** Restarting:  Restarting is the way to calculate the hash again by previous step(collect transactions) if node can't do it in given time. If any other node does this already, a process begins from the first step(Get difficulty) then. 
+
+Proof of work requires a lot of energy, and the possible threat to the blockchain system, because it can alter blockchain if some peers in the network own 51% of the ledger as all nodes trust the most extended chain in the network.
+
+
+
+
+.source - https://www.netguardians.ch
+[#pow]
+[caption="Figure 4: ",link=https://static1.squarespace.com/static/551aff08e4b037a3bf1ac8c0/t/585bfb9bd2b857c3325a6c96/1482423207242/?format=750w]
+image::https://static1.squarespace.com/static/551aff08e4b037a3bf1ac8c0/t/585bfb9bd2b857c3325a6c96/1482423207242/?format=750w[]
+
+.source - https://cryptographics.info
+[#pow]
+[caption="Figure 5: ",link=https://cryptographics.info/wp-content/uploads/2018/01/resized/1224/0/65/0/0/0/PoW.png]
+image::https://cryptographics.info/wp-content/uploads/2018/01/resized/1224/0/65/0/0/0/PoW.png[]
+
+* Proof of Stake (PoS)
+PoS was mentioned in the first bitcoin project, but it
+wasn't used because of the robustness and other reasons. 
+The initial application of PoS is PPCoin. The concept of this PoS algorithm is based on the age of coin. The coin age is calculated by multiplying its value by the period after it was produced. 
+The longer any node keeps the coins, the more advantages it can get in the peer network. Coin holders will also receive a certain reward according to the how long they hold these coins.
+
+PoS promotes the coins dwellers to increase the holding time. With the idea of coin age, the blockchain is no longer entirely relying on the PoW and efficiently solves problems of PoW. Ultimately, PoS improves the security of blockchain with the increasing value in the blockchain. The hackers or malicious peers need to acquire a massive number of coins and hold them long enough to attack. 
+
+.source - https://cryptographics.info
+[#pow]
+[caption="Figure 6: ",link=https://cryptographics.info/wp-content/uploads/2018/01/resized/1224/0/65/0/0/0/PoS.png]
+image::https://cryptographics.info/wp-content/uploads/2018/01/resized/1224/0/65/0/0/0/PoS.png[]
+
+* Delegated proof of stake (DPOS )
+
+Satoshi Nakamoto initially designed bitcoin in such a way that participants could use the CPU power to mine and hashing power could match the peer nodes in the network. The idea behind this was to give each node equal opportunity to participate in the decision-making of the blockchain. As the technology evolved and bitcoin is rising, people came up with special mining machines. Owning multiple of such machine gives you more hashing power, and ordinary miners can rarely create any new blocks. 
+
+Top N nodes are elected in the network which has higher stakes and hashing power(At least 50% stakeholders would believe that enough decentralization is there)to have accounting rights and create blocks. 
+The DPoS seems to be more power-saving and efficient than PoS and PoW.
+
+.source - https://cryptographics.info
+[#pow]
+[caption="Figure 7: ",link=https://cryptographics.info/wp-content/uploads/2018/01/resized/1224/0/65/0/0/0/DPoS.png]
+image::https://cryptographics.info/wp-content/uploads/2018/01/resized/1224/0/65/0/0/0/DPoS.png[]
+
+
+* Practical Byzantine Fault Tolerance (PBFT)
+
+Practical Byzantine Fault Tolerance could be an excellent method to resolve the transmission errors. This consensus algorithm works on communication between the master node and client node, and has five stages as below - 
+
+** Request
+The master node creates a timestamp for the request coming from the client node.
+
+** Pre-Prepare
+The master node registers the request message came from the client node, assign an order number and broadcasts a pre-prepared message other server nodes. They determine whether to accept or reject the request.
+
+** Prepare
+If any node accepts the request, it broadcasts a prepare message to all the other nodes and receives the prepare messages from the other nodes. If the majority of nodes accept the invitation, they will move to commit stage.
+
+** Commit
+All nodes in commit state will send commit message to each other. In the meantime, if a server node receives 2f+1 commit messages, it could consider that maximum nodes agree to accept the request, and executes the instructions within request message.
+
+** Reply
+Once instructions are executed, server node needs to respond to the client node. If the client could not get the reply due to network delay server nodes will have the request held, or if instructions have been executed already, server nodes only need to transmit the reply message repeatedly.
+
+
+
+* Raft
+
+Raft algorithm was proposed in 2013 by Standford's Ongaro and others. Raft attains the same effect as Paxos(which was hard to understand in 90's) and is more suitable for engineering implementation.
+
+Raft cluster contains five server nodes, and each node will have three states, i.e., leader, follower, and candidate. The leader handles all requests from clients. Out of five, maximum two nodes can crash at the same time, and three will work in the cluster
+
+
+.source -https://blog.acolyer.org/2015/03/12/in-search-of-an-understandable-consensus-algorithm/
+[#pow]
+[caption="Figure 8: ",link=https://blog.acolyer.org/2015/03/12/in-search-of-an-understandable-consensus-algorithm/]
+image::https://adriancolyer.files.wordpress.com/2015/03/raft.jpg[]
 
 ==== Blockchain - Read/Write
 As its a distributed ledger, everyone, who owns a decent computer with enough power, is allowed to use the source code and read-write ledger state.
@@ -88,12 +176,44 @@ Bitcoin, the name is well suited and catch attention from tech-savvy people. I h
 
 Bitcoin tales started in 2008 when Satoshi Nakamoto, proposed a solution to solve double spending problem and ditch central authorities those who take over the transaction from our very hands and take much time to process along with a fee.
 
-=== Why did we need it?
+=== Why did we need it? or not 
 
-Earlier when we did not have any currency, people used to trade stuff like crops, goods, etc. and fulfill their daily needs. But later on, the concept of currency was developed. It evolved over time and led to paper money in exchange for gold with world bank.  Later on, keeping gold was not an option anymore, and government can print currency whenever in need. Printing money wasn't a problem, but it caused to inflection and became invaluable over time. What we could purchase with 1 Unit is way costly nowadays. 
+Earlier when we did not have any currency, people used to trade stuff like crops, goods, etc. and fulfill their daily needs. But later on, the concept of currency was developed. It evolved and led to paper money in exchange for gold with world bank.  Later on, keeping gold was not an option anymore, and government can print currency whenever in need. Printing money wasn't a problem, but it caused to inflection and became invaluable over time. What we could purchase with 1 Unit is way costly nowadays. 
 
 Another problem was that people were stacking money in banks and banks could lend the same money up to 90% back to people. These financial institutions were acting as a central authority to circulate cash within society, and all the transactions, going through the are chargeable. This ultimate business model was efficient for financial institutions but not good for people who need privacy and security. 
 Satoshi Nakamoto, rescued us by proving a practical approach to solve these problems.
+
+In the financial sector, Bitcoin is the very first application to demonstrate tremendous potential. However, it also attracts government authorities to utilize such powerful technology and implement blockchain in a centralized manner. It may be for currency or maintaining other government affairs. Similarly, other tech giants and financial institutes are also exploring blockchain. 
+
+Bitcoin solves two problems - Double spending and Byzantine Generals problem. Double spending refers to idea where people or any institute reuses the currency in more than one transaction at the same time. When using the traditional money, double spending isn't happening but if financial institutions maintain their ledgers and can produce this scenario all the time. Double spending can also be solved by internet transactions where centralized trusted institutions are used. 
+
+The other problem - Byzantine generals problem is related to distributed systems. In a distributed network, data amongst nodes can be distributed in peer to peer network, but there are chances that data could be attacked by hackers or malicious users to alter contents of data, compromising data consistency on nodes in the peer network. To identify tempered information, normal nodes would have to validate this data across other nodes, resulting in the need for corresponding consensus algorithm. 
+
+Other things to consider - 
+Privacy?
+Its okay to trade with cash as you don't need to tell anybody how much or less you are paying. But with if you want to pay the more significant amount, you would probably need to use banks or any other institution to make that transaction.  Suppose I want to pay $2000 to my friend, using bank and banks will know how much I have paid to whom. 
+
+No privacy at all ...
+
+But, with bitcoin, nobody knows anything except two parties involved in the exchange.
+
+Fees?
+Suppose, I want to send money to some friend in India, I have to go through my bank/local reserve bank/federal reserve/international wire system and at last recipients bank. At each step, there will be a small fee applied to the transaction as no institution will do it for free. 
+
+But, with bitcoin, I have to pay a small fee once not twice or thrice for my transaction no matter what.
+
+Human Error?
+People tend to make mistakes so they can send money to the wrong account, or the bank system could be compromised.
+Or, there may be chances that government prints money without letting you know. The currency flow in the market will increase, and ultimately the value will be down. 
+
+But with bitcoin, there is a limited number of coins supplied in the network. only 21,000,000 coins.
+
+Who is backing paper money?
+
+Trust. 
+No more comments on this. 
+
+Bit resolves all these problems faced by us. But there are some limitations and area of improvement for bitcoin, and new alternatives are born, in the market. 
 
 === Etherium
 
