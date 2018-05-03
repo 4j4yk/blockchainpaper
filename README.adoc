@@ -217,7 +217,55 @@ Bit resolves all these problems faced by us. But there are some limitations and 
 
 === Etherium
 
+Ethereum is another approach to resolve problems which couldn't be addressed using bitcoin. It is an open-source blockchain-based distributed public computing platform and operating system which also feature smart contract functionality. "It supports a modified version of Nakamoto consensus via transaction based state transitions." Vitalik Buterin is a co-founder of Ethereum, and he analyzed the Bitcoin protocol, and it’s weaknesses, and proposed how this new solution approaches them as a “next generation smart contract & decentralized application platform.”
 
+Etherium is a cryptocurrency as well as a platform to provide smart contracts. It supports web 3.0 to create decentralized web applications as well. 
+
+Like its antecedent Bitcoin, Ethereum is also a protocol and network. Its native currency is called "Ether" or "ETH." People within Ethereum network transact with this currency, or if there are smart contracts, this currency will be used for the gas payments. 
+
+We can safely say that Ethereum is similar to bitcoin and other cryptocurrencies, which means that owners can use Ether for payments or keep it for longer times and possibly achieve capital gains from its growing value. As if today the value of Ether is  $722.34 and it up to $1200 in the past. 
+
+According to the official website, during the initial presale. 60 million ether were created, and 12 Million to support development fund. Nowadays approx five ETH are produced per block.
+
+=== How is it different?
+
+The Bitcoin gives one unique application of blockchain technology, a p2p electronic cash system that facilitates online Bitcoin transactions. So, Bitcoin blockchain network is used to keep track bitcoins and ownership of coins. On the other hand, the Ethereum blockchain network allow running the code of any decentralized application, such as web 3.0 applications and smart contracts.
+
+In the Ethereum network mining is different from bitcoin. The minor work to gain Ether or ETH. These are the type of crypto network's token that fuels the blockchain system and Ethereum network. Exceeding the capability for the trading cryptocurrency, Ethereum also allows application developers to pay for transaction fees and services on the Ethereum network.
+
+Now we refer it ETH as A next generation blockchain. I would also like to list few bullet points to give a bright idea about it.
+
+* Faster transaction times - The Ethereum the block time about 14 to 15 seconds while Bitcoin has 10 minutes. Ethereum uses the Ghost protocol to achieve this.
+
+* Economic model - Ethereum issues the same quantity of Ether each year ad infinitum while Bitcoin block rewards halve every four years, so over the time bitcoin mining is not an option.
+
+*  Costing  - It depends on the computational complexity, bandwidth use, and storage needs. Bitcoin transactions compete equally with each other. Costing is called Gas in Ethereum blockchain and is limited per block, on the other hand, it is defined by the block size in Bitcoin.
+
+* Crowd-funding - Ethereum was crowd-funded by developer community groups and companies. On the other hand,  Bitcoin was released to the community. The early miners control most of the coins in the Bitcoin network. 
+
+* Pool mining - Using the Ghost protocol rewarding stale blocks, Ethereum controls centralized pool mining, so miners in the mining pools won't have any advantage such as pool regarding block propagation.
+
+* Hashing - Ethereum promotes decentralized mining by people using their GPU’s and uses a memory hard hashing algorithm named Ethash that alleviates against the use of ASICS hardware which is very efficient and dominating for Bitcoin mining. 
+
+Apart from these, the beauty lies in Ethereum Virtual Machine. 
+It focuses on implementing security and executing untrusted code by workstations around the globe. More specifically we can say this project is designed to prevent Denial-of-service (DOS) attacks, which have become somewhat famous in the blockchain world. Moreover, the  Ethereum Virtual Machine guarantees programs do not mess with each other’s state, providing communication can be established without any potential interference. It's entirely isolated from main network and ideal for testing smart contracts and decentralized applications. Its based on Solidity language but there are other implementations in Ruby, C++, Python and some other coding languages. 
+
+Now let's have a glance at the visual representation of Smart Contract, Decentralized application, and EVM after all this reading - 
+
+.source - https://www.edureka.co/
+[#evm]
+[caption="Figure 9: ",link=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-EVM-edureka-768x280.png]
+image::https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-EVM-edureka-768x280.png[]
+
+.source - https://www.edureka.co/
+[#dao]
+[caption="Figure 10: ",link=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-dao-example-edureka-485x300.png]
+image::https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-dao-example-edureka-485x300.png[]
+
+.source - https://www.edureka.co/
+[#dapp]
+[caption="Figure 11: ",link=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-dapp-example-edureka-293x300.png]
+image::https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-dapp-example-edureka-293x300.png[]
 
 === Zcash
 
