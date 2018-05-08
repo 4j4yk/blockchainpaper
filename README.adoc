@@ -20,6 +20,34 @@ The origins of blockchain technology can be traced to 1991 when Stuart Haber and
 
 Well, that was long ago. At present, it wouldn't be wrong to say that the blockchain technology gained significance in 2008 when a mysterious person named "Satoshi Nakamoto" came up with the Bitcoin white paper. Satoshi Nakamoto proposed a practical approach to solving the problem of double spending using same blockchain technology. Another fact which still amazes people is that nobody knows who Satoshi Nakamoto was and its still a mystery.
 
+In 1991, Stuart Haber and W. Scott Stornetta did the first work on a cryptographically
+secured chain of blocks. To improve the efficiency of collecting several documents into one block,
+Bayer, Haber, and Stornetta in 1992, integrated Merkle trees to the blockchain.
+In the year 1998, Nick Szabo presented bit gold as an instrument for decentralised digital currency
+and smart contracts. Stefan Konst in the year 2000, introduced a general cryptographic theory of
+secured chain.
+An anonymous person or group is known as Satoshi Nakamoto (2008) in 2008 visualized the first
+distributed blockchain. In the year 2009, executed the distributed blockchain as the core element for
+digital currency bitcoin. Where it serves as an open ledger for all transactions. A blockchain
+database is handled autonomously with the help of peer-to-peer network and a distributed
+timestamping server. The double spending issue has been resolved with the help of blockchain for
+bitcoin without needing a trusted organization or an administrator. The bitcoin design has been a
+model and inspiration for other applications.
+The bitcoin blockchain file size reached 20 gigabytes in August 2014. The volume had grown to 30
+gigabytes on January 2015 and from January 2016 to January 2017, the proportion has increased from 50
+gigabytes to 100 gigabytes.
+To refer to new applications of the distributed blockchain database, Blockchain 2.0 is used. The
+Blockchain 2.0 technologies go beyond transactions. They allow the value exchange without any
+influential intermediaries acting as arbiters of money and information.
+As of 2016, the implementations of Blockchain 2.0 requires an off-chain oracle to access
+any data which is external or to access any events based on the time or market conditions that need
+to interact with the blockchain. To investigate blockchain-based automated voting systems, 
+the central securities depository of the Russian Federation(NSD) proclaimed a pilot project based
+on Nxt Blockchain 2.0 platform in 2016. IBM has opened a blockchain research center in
+Singapore in July 2016. The World Economic Forum met to discuss the development of governance
+models related to blockchain in November 2016 and also a Global Blockchain Forum is created by
+the industry trade groups which was an initiative of the Chamber of Digital Commerce. 
+
 === The concept
 
 The key term is distributed ledger technology (DLT), which includes blockchain and smart contracts. Distributed ledger is a type of data structure within a block. 
@@ -83,9 +111,6 @@ this mathematics problem in bitcoin. Steps in this process are as follows -
 
 Proof of work requires a lot of energy, and the possible threat to the blockchain system, because it can alter blockchain if some peers in the network own 51% of the ledger as all nodes trust the most extended chain in the network.
 
-
-
-
 .source - https://www.netguardians.ch
 [#pow]
 [caption="Figure 4: ",link=https://static1.squarespace.com/static/551aff08e4b037a3bf1ac8c0/t/585bfb9bd2b857c3325a6c96/1482423207242/?format=750w]
@@ -142,7 +167,6 @@ All nodes in commit state will send commit message to each other. In the meantim
 Once instructions are executed, server node needs to respond to the client node. If the client could not get the reply due to network delay server nodes will have the request held, or if instructions have been executed already, server nodes only need to transmit the reply message repeatedly.
 
 
-
 * Raft
 
 Raft algorithm was proposed in 2013 by Standford's Ongaro and others. Raft attains the same effect as Paxos(which was hard to understand in 90's) and is more suitable for engineering implementation.
@@ -170,7 +194,7 @@ Permissioned blockchains are generally company owned.
 ===== Public vs Private 
 Now we know that two kinds of blockchains are there already. These can be further categorized based on the access provided to users in the network. A Permissionless blockchain may be public or private. Similarly, a permissioned blockchain can be public or private. 
 
-=== Bitcoin
+== Bitcoin
 
 Bitcoin, the name is well suited and catch attention from tech-savvy people. I have already discussed a little bitcoin earlier in this paper. 
 
@@ -215,7 +239,7 @@ No more comments on this.
 
 Bit resolves all these problems faced by us. But there are some limitations and area of improvement for bitcoin, and new alternatives are born, in the market. 
 
-=== Etherium
+== Etherium
 
 Ethereum is another approach to resolve problems which couldn't be addressed using bitcoin. It is an open-source blockchain-based distributed public computing platform and operating system which also feature smart contract functionality. "It supports a modified version of Nakamoto consensus via transaction based state transitions." Vitalik Buterin is a co-founder of Ethereum, and he analyzed the Bitcoin protocol, and it’s weaknesses, and proposed how this new solution approaches them as a “next generation smart contract & decentralized application platform.”
 
@@ -267,13 +291,222 @@ image::https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/Wha
 [caption="Figure 11: ",link=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-dapp-example-edureka-293x300.png]
 image::https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/01/What-is-ethereum-dapp-example-edureka-293x300.png[]
 
-=== Zcash
+ZCash is a cryptocurrency like the bitcoin but with increased security and allows anonymity features. It helps in shielding the transactions by obscuring the parties and amounts of transactions. Zerocoin employs zero-knowledge proofs in the way of unlinkability, to prevent transaction graph analyses. This protocol indicates that any coin that passes through this is untraceable. Zerocoin does neither rely on digital signatures to validate coins nor does it require a central bank to prevent double spending. Zerocoin authenticates that they belong to a public list of valid coins (which can be maintained on the blockchain). Users may periodically “wash” their bitcoins via the Zerocoin protocol. So, it can be called as a decentralized mix.
+However, regular transactions must happen through bitcoin for the following reasons:
+* ZCash requires longer to verify at a 128-bit security hash. Also, it needs to be broadcasted in the network and verified by each node. This increases the cost significantly higher than a bitcoin. 
+* ZCash has fixed denominations. 
+
+Zerocash can carefully instantiate the cryptographic ingredients of the construction to implement zk-SNARK. (Succinct Non-interactive ARgument of Knowledge or publicly-verifiable preprocessing zero knowledge SNARK).  It can be applied in two ways – mint transactions and pour transactions. 
+* Mint transactions: It allows a user to convert a specified number of non-anonymous bitcoins into the same amount of zero coins belonging to a specified Zerocash address. The Zerocash node maintains a Merkle tree (hash tree in which every node is hashed with the labels of the child nodes). The mint transaction specifies the coin's value, owner address, and serial number(unique). It employs an SHA-256 hash function and hides both the coin's value and owner address.
+
+ * Pour transactions: It allows a user to make a private payment, by consuming some of the owner’s coins in order to produce new coins. Roughly, a pour transaction, for (up to) two input coins and (up to) two output coins, involves proving, in zero knowledge, that:
+    • the user owns the two input coins;
+    • each one of the input coins appears in some previous mint transaction or as the output coin of some previous pour transaction; and
+    • the total value of the input coins equals the absolute value of the output the coins.
+
+* Industry usage
+
+In April 2018, Circle, the provider of crypto-investment options, added Zcash to its list. 
+It can help to build Internet payment and privacy infrastructure. A study was conducted to about the linkability of ZCash. ZCash has two types of addresses: Z-addresses and t-addresses. Transactions between z and t addresses do not obscure the transaction amount thereby increasing the chances of traceability. But any transactions involving only Z-addresses are private. 
+
+== Others
+
+Apart from the mainstream block-chain technology currencies otherwise known as Crypto-currency, there are various other block-chains that are prominent and widely dominate the crypto-economy
+* Litecoin (LTC)
+Litecoin came into the block chain technology scene in the year 2011, and was among the initial candidates following bitcoin and was often referred to as ‘silver to Bitcoin’s gold.’ It was created by Charlie Lee, an MIT graduate, and former Google engineer. Litecoin is based on an open source global payment network that is autonomous and uses "script" as a working proof, which can be decoded with the help of consumer grade CPUs. 
+Although Litecoin is similar to Bitcoin in various ways, it has a faster block generation rate and hence offers a quicker transaction confirmation. It is not only popular amongst developers; there are a growing number of merchants who accept Litecoin.
+
+*  Ripple (XRP)
+Ripple is a real-time global settlement network that offers instant, precise and inexpensive international payments. Ripple enables banks to settle overseas payments in real time, with end-to-end transparency, and at cheaper rates. Since its inception in 2012, Ripple’s blockchain tech has a market capital of $1.26 billion, and its consensus ledger -- its method of confirmation -- doesn’t require mining, a feature that sets it apart from bitcoin and altcoins. Since Ripple’s structure doesn't need mining, it reduces the usage of computing power and minimizes network latency. 
+Ripple business approach is to distribute its value in a certain way that it effectively incentivizes specific behaviors. It plans to distribute XRP primarily through business development deals, dedicated incentives to liquidity providers who offer tighter spreads for payments and selling XRP to institutional buyers interested in investing in XRP. 
+* Monero (XMR)
+Monero is a secure, private and untraceable block chain method. This open-source cryptocurrency was released in April 2014 and soon bagged tremendous interest among the cryptography community and block-chain enthusiasts. 
+The development of this cryptocurrency is entirely donation-based and is mostly community-driven. Monero was released with a strong focus on decentralization and scalability and enables complete privacy by using a special technique called ‘ring signatures.’ With this technique, it would appear as a group of cryptographic signatures with exception of having at least one real participant – but since they all appear valid, the real one cannot be isolated or traced.
+* Dash
+Dash formerly known as Darkcoin is a more secretive version of Bitcoin. Dash offers more anonymity as it works on a decentralized master code network that makes transactions almost untraceable. Launched in January 2014, Dash experienced an increasing popularity in a short span of time. This cryptocurrency was created and developed by Evan Duffield and can be mined using a CPU or GPU. In March 2015, ‘Darkcoin’ was revamped to Dash, which stands for Digital Cash and operates under the alias DASH. Although rebranded the technological features such as Darksend, InstantX remained unchanged.
+In conclusion, Bitcoin continues to lead the pack of blockchain technology icons, regarding market capitalization, user base, and popularity. Nonetheless, it’s peers such as Ethereum and Zcash which are being used more for enterprise solutions are becoming popular, while some altcoins are being endorsed for superior or advanced features with regards to Bitcoins. Going by the current trend, blockchain technology is here to stay but how many of them will emerge leaders amid the growing competition, only time will tell.
+
+There are many more blockchain based solutions and cryptocurrencies.
+
+== Complexity
+
+According to Harvard business review, blockchain is not a “disruptive” technology, which can attack a traditional business model with a lower-cost solution and overtake incumbent firms quickly. The blockchain is a foundational technology: It has the potential to create new foundations for our economic and social systems. But while the impact will be enormous, it will take decades for blockchain to seep into our economic and social infrastructure. The process of adoption will be gradual and slower due to its complexity. It is yet to be explored by many users to realize its true value. As the scale of its research increases, businesses will require an institutional change to get used to it.
+
+Financial institutions, government and other retail industries all transact with consumers, and they will be notified of transactions via email, instant SMS or paper mails to their residence. Out of all, I think financial and retail industry have favorably adopted online technologies, providing consumers with the capability to access all sort of statements of the transactions and accounts and manage them online through a web portal or mobile application. But this is not the case with governments, it is more challenging, owing to many circumstances, including law, emerging in complicated business processes along with different technology and systems.
+
+The governments of different nations are advancing with the digital agenda to face these challenges. Often they use web portals and mobile applications to provide a service(s) to consumers which acts as a gateway and operated by individual agencies with some level of trust and security. Some of the governments are more superior, implementing technologies such as omnichannel to provide an integrated account view. 
+
+I could see the challenge from my perspective; I handle many online accounts, and many of them require attention while some don't. I will rely on getting notifications for important one with a to-do list type of information via the link. Complexity rises for when there are crossovers and connections between multiple things, such as SSN, tax, and employment are well connected and require dealing with government agencies all the time. 
+
+In such case, I tend to comply with administrative requirements; I retain all paper records all transaction which needs some effort in organizing and stacking and requires physical space to store them. 
+
+I live in the dilemma that which records to retire after the particular time. To save space and efforts I may scan everything and form a digital collection of all the paper records, but its still going to be the pain as it would have it's own complexity and costs. I think financial institutions and others could afford to consolidate all my records and keep them in a secure place which I choose. 
+
+However, such system would need to be structured in such way that it provides the results of each action done, exempli gratia, payment transaction notifications, medical services offered, entitlement cards accepted and many more. This structure needs to be consistent something and follow proper amendments such as Fintech SWIFT format. And also provide access independent of any device any platform along with all the records in chronological order.
+
+To implement blockchain in any industry, we have to consider the properties of the decentralized system over the centralized system and evaluate how decentralized solution may benefit the industry in long-term prospect. Till now in this report, I might have been favoring the blockchain, but it requires profound observation of the problem and ways to take advantage of blockchain technology and implement it. The fundamental properties we need to discuss or have a look for determining complexity perspective, are as below - 
+
+Public Verifiability - Determine the correctness of system state. In DLTs, peers or minors in the network verifies the system state, while in a centralized system, we don't have a way to confirm as we do in decentralized systems, and it's more like we trust a central entity to provide use correct system state.  Suppose, in a relational database; an employee runs a query and updates wrong information, that information becomes truth as soon as executed and updated in the database, and can be corrected with human observation and correction.
+
+Transparency - Transparency of data and process for updating system state and observer audience.
+
+Privacy - This is an essential aspect of any system and can be easily achieved in centralized systems.
+
+Integrity - It requires some sort of public verifiability to ensure the retrieved information is correct or not. 
+
+Redundancy - Retaining data on multiple systems generates redundancy, and there significance and requirement are different in both systems. 
+
+Trust - Having authority to provide read/write access to a system. 
+
+Consider these facts; an industry can conclude adopting the blockchain technology. However, there is a tradeoff between privacy and transparency while deciding to implement the blockchain systems. Either a system full transparent by providing all information or private by hiding all info.  DTL can ensure privacy as well as public verifiability without compromising any individual's information with heavy usage of cryptography. Using such systems have their own merits and demerits such as Zerocash is a digital currency which provides full anonymous transactions with expensive hashing techniques. 
+
+I have read a lot about the blockchain use cases over time and really couldn't see a clear use case to implement the decentralized solution. According to a research paper (Do you need blockchain), below flowchart simplify the process of choosing whether you want to apply blockchain solution or not. 
+
+.source - https://eprint.iacr.org/2017/375.pdf
+[#scm]
+[caption="Figure 12: ",link=https://78.media.tumblr.com/4d0fcfc8b073ff4d498912f8c04148be/tumblr_p3qic2DWV21qzx36ho1_1280.png]
+image::https://78.media.tumblr.com/4d0fcfc8b073ff4d498912f8c04148be/tumblr_p3qic2DWV21qzx36ho1_1280.png[]
 
 
-=== Others
+== Use cases
 
-=== Complexity
+First applications of Blockchain are Bitcoin and Ethereum, but there is still a to explore and familiarize with its uncovered uses. Let us discuss a few use cases here. Firstly, if you think about the online verification of card and badges, you will have to scan the card or punch in the number to verify if this authentic. The reason why it is not efficient is that of the cost of services that are hosted in the cloud. In contrast with the use the Blockchain, we don’t have to build our identity infrastructure as we will be using Ethereum’s open Blockchain to store the details of identity and query it.
+Secondly, you cannot tamper the data that uses blockchain technology. When the records are stored in paper ledgers, they can tamper quickly, but a blockchain which is the linked chain of data blocks cannot tamper. Since the blockchain is inside the computer the thought of physical damage is ruled out. Each block has a hash id of previous block’s hash which binds them tightly together and makes it hard to tamper.  Even if someone tampers the records, it is known or visible. 
+Here is the diagram that explains the complete scenario, 
 
-=== Use cases
+.source - https://hackernoon.com/popular-use-cases-of-blockchain-technology-you-need-to-know-df4e1905d373
+[#scm]
+[caption="Figure 12: ",link=https://cdn-images-1.medium.com/max/2000/1*vvWKteUhigqyX4D-UoYlxQ.png]
+image::https://cdn-images-1.medium.com/max/2000/1*vvWKteUhigqyX4D-UoYlxQ.png[]
 
-=== Handson
+ICOs – the checkout travel chain is the new way for getting investments. With the help of this, anyone anywhere can become an investor. ICOs offer something called tokens are stored in Blockchain wallet and can be used to pay for the services to your company. Theoretically, you can see them like stocks and shares which you can also sell or exchange them when its value increases - these are digital assets.
+Blockchain network can be used to create digital contracts. For contracts between any two parties where once does not stick to the consent can come to the rescue of digital contracts. In an example of the tenant not paying the landlord on a monthly basis, a consistent code can be written which tells the computer to transfer the amount from tenant’s back account to landlord’s bank account. Another good example is to enforce the digital contract if the client refuses to pay for the services provided. 
+Digital voting is another big use case of block chain technology. It is believed that number of participants that come out, stand in queue and vote are less and lessening each year. What if could let people sit at home and vote for their desired candidate. There are many security concerns to that because hackers can simply Dmodify your data or can know which candidate you are voting for. So to avoid this Blockchain is used which can provide anonymity and better security and can bring in more participants.
+We know that data can be on free storage services like Gmail and Dropbox, but it is very hard not to think if our files are read or peeped in by cloud services host. On the other hand, data on blockchain are decentralized and is stored on different computers on the network with high encryption. There is also the provision to rent out our storage if you have excess space locally. To combine, this will provide increased efficiency and reduced costs, control of customer and high-level trust in the repository or transactional data.
+Gun safety is another one where blockchain can be used to track the gun ownership and possession related information. It can be used to monitor the criminal id history and attempts to purchase which is very important with all the recent news of the illegal and unethical use of guns in the United States.
+
+To implement the blockchain, there seem to be various use cases, and we will discuss most relevant one now. 
+
+==== Supply Chain Management 
+
+Supply Chain Management (SCM) consists of various intermediate storage and production cycles for the flow of goods and services until they reach the final destination. Typically, many firms cooperate and trade on a global scale within a given product supply chain. This leads to complexity of managing the whole life cycle of the product and expenses for inventory, processes, and failure detection management are pretty expensive. Nowadays many companies like Everledger, are in the market with their blockchain based solutions and these can help in improving the efficiency of the supply chain in the long run.
+
+
+
+.source - https://aqurus.ca/
+[#scm]
+[caption="Figure 13: ",link=https://aqurus.ca/wp-content/uploads/2018/01/blockchain-example.png]
+image::https://aqurus.ca/wp-content/uploads/2018/01/blockchain-example.png[]
+
+==== Payments
+
+The payment transactions take multiple steps, and banks do not settle them immediately. In the event that Alice needs to exchange $100 to Bob, Alice's record is charged with $100 and Bob's record ought to be credited with the same sum. On the off chance that the records are at a similar bank, the bank can just apply these progressions to their books on the grounds that the aggregate charge furthermore, credit measure of the bank stays indistinguishable. In the event that Alice in any case, has her record at bank An and Bob at bank B, the aggregate charge of bank A progressions while charging Alice's record. Correspondingly, if Bank B credits Bob's record without charging another record with the same esteem, the total of all charges and all credits at Bank B would never again be equivalent. This can be comprehended, if every one of the banks has a record with the other bank (generally alluded to as a Nostro account). At that point, bank A could charge Alice's record and credit B's account while bank B would charge A's record and credit Bob's account while adjusting the particular Nostro account. By and by this would prompt huge obligations between bank.
+
+.source - http://www.paymentscardsandmobile.com/
+[#payments]
+[caption="Figure 14: ",link=http://www.paymentscardsandmobile.com/wp-content/uploads/2016/03/Figure-1_-Components-of-a-Payments-Network-Traditional-vs-Blockchain-768x363.jpg]
+image::http://www.paymentscardsandmobile.com/wp-content/uploads/2016/03/Figure-1_-Components-of-a-Payments-Network-Traditional-vs-Blockchain-768x363.jpg[]
+
+Ripple is one of the blockchain solutions for achieving smoother payment transactions. 
+
+.source - https://cdn.dealstreetasia.com
+[#payments]
+[caption="Figure 15: ",link=https://cdn.dealstreetasia.com/uploads/2016/09/Ripple-e1474265508757.png]
+image::https://cdn.dealstreetasia.com/uploads/2016/09/Ripple-e1474265508757.png[]
+
+
+==== Decentralized Autonomous Organizations
+
+A Decentralized Autonomous Organizations (DAO) is an association that is run self-rulingly through an arrangement of brilliant contracts. As opposed to customary associations or organizations, there is no focal control or administration. Rather, a DAO is characterized by a set of standards encoded in keen gets that characterize how the DAO carries on and how it develops. Commonly, a DAO has numerous speculators that at that point choose by voting how the assets of the DAO ought to be contributed. As the objective of such an association is to be administered in a totally decentralized manner and the speculators, for the most part, don't know or believe each other, a permissionless blockchain is normally a solid match for such a plan: The framework is required to 
+store some state, and numerous commonly doubting and conceivably obscure journalists exist. Decentralized self-ruling associations are, be that as it may, an uncommon case. For a few applications, a devoted permissioned blockchain might be helpful for a solitary DAO. Much of the time, be that as it may, DAOs don't require their own particular blockchain yet are more qualified to expand over a current blockchain with an officially existing money.
+
+.source - https://blockchainhub.net
+[#payments]
+[caption="Figure 16: ",link=https://media.blockchainhub.net/wp-content/uploads/2016/11/Top-down-organizations.png]
+image::https://media.blockchainhub.net/wp-content/uploads/2016/11/Top-down-organizations.png[]
+
+==== others 
+
+** Automotive - Observe history of the vehicle from assembly to sale, improve parts management process
+
+** Banking, Financial, Fintech - Streamline current cross-border payments processing and improve security, solve double spending 
+
+** Cloud Storage - Cheaper decentralized systems transactions, Crowdsourcing unused cloud storage in the decentralized network
+
+** Credit History - Chronological, accurate, transparent, and accessible credit reports 
+
+** Cybersecurity - Improve validity of data integrity and reduce no single point of failures in systems
+
+** Donations - Improve crowdfunding campaigns and prevent donations fraud with auditable trails
+
+** Education - Improve academic credentials verification an d federated records of teachers and students 
+
+** Energy - Provide competitively peer to peer energy transfer and smart utility metering
+
+** Forecasting - Combine blockchain with machine learning algorithms to provide forecasts and history 
+
+** Government and Voting - Verifiable audit trails to Reduce voter fraud, inefficiencies, Provide integrity of citizen registry data
+
+** Gun Safety - Tracking gun title and ownership, criminal identity history, purchase, etc. 
+
+** Human Resources - Improve background checks, payments, and benefits processes
+
+** Insurance - Improve multi-party contracts, risk contract efficiency, claims adjudication, disputes 
+
+** IoT - The capacity for IoT applications to offer transactional data to blockchains
+
+** Law enforcement - The integrity of data evidence, a chronological chain of events
+
+** Legal - Smart contracts with prescribed rules, termination dates, and convenience for appropriate individuals.
+
+** Marketing - Bypass agents, providing more cost-effective advertisements
+
+** Media - 
+Control of ownership rights
+Anti-piracy / copyright infringement
+Use of smart contracts for artist pay/legal procedures
+Cryptographic, secure, and anti-3rd party payments 
+
+** Medical / Healthcare - 
+Store secure patient databases on the blockchain
+Improve Claims Adjudication process
+Improve patient-to-hospital or patient-to-doctor transactions with transparency 
+Over all Efficiency, privacy, and ownership of patient health data
+
+** Public Transportation/Ride Sharing -
+Streamline common transit process, more accurate payments for ride, gas, and wear and tear
+
+** Real Estate - Transparency within contracts, property information verification, record decentralization, Record, track, transfer land titles
+
+** Travel - Manage Passenger ID, boarding, passport, payments, and other documentation digitally and verify during travel
+
+** Wills and Inheritances - Smart contracts to handle the legality of will and allocation of inheritances
+
+An infographic view - 
+
+.source - https://itsblockchain.com
+[#info]
+[caption="Figure 17: ",link=https://itsblockchain.com/wp-content/uploads/2016/10/Blockchain-Usecases-and-Startups.png]
+image::https://itsblockchain.com/wp-content/uploads/2016/10/Blockchain-Usecases-and-Startups.png[]
+
+=== Handson 
+During this study I have been reading a lot of articles and papers to understand and implement the blockchain and decentralized solutions. I could do a basic implementation as below - 
+
+* link:https://github.com/akhampariya/ipfs[IPFS]
+* link:https://github.com/akhampariya/blockchainapp[Go Blockchain - demo]
+
+=== Reference
+
+* Karl W, Arthur G (2017) Do you need a Blockchain? - Retrieved from: https://eprint.iacr.org/2017/375.pdf
+* Accenture (2015) Blockchain Technology: Preparing for Change, Retrieved from :https://www.accenture.com/ae-en/~/media/Accenture/next-gen/top-tenchallenges/challenge4/pdfs/Accenture-2016-Top-10-Challenges-04-Blockchain-Technology.pdf
+* Ali, A. (2017). Blockchain Technology - ICANN58. Retrieved from https://www.slideshare.net/abderrahmanaitali/blockchain-technology-icann58
+* Antonopoulos, A. M. (2015). Mastering Bitcoin. Sebastopol, CA: O'Reilly Media. BBN Times.(2017) : Promoting E Governance with blockchain Retrieved from: https://www.bbntimes.com/en/society/promoting-egovernance-with-blockchain
+* bitcoincash.org. (2017). Bitcoin Cash. Retrieved from https://www.bitcoincash.org
+* Blockchain S.A. (2017). Hash Rate. Retrieved from https://blockchain.info/de/charts/hashrate?daysAverageString=7
+* Bourgi, S. (2017, October 18). Segwit2x: The Hard Fork That Failed to Activate. Hacked.com. Retrieved from https://hacked.com/segwit2x-the-hard-fork-that-failed-to-activate/
+* Buterin, V. (2013, March 12). Bitcoin Network Shaken by Blockchain Fork. Bitcoin Magazine.Retrieved from https://bitcoinmagazine.com/articles/bitcoin-network-shaken-by-blockchain-fork1363144448/
+* Caetano, R. (2015). Learning bitcoin (1.st ed., Community experience distilled). Packt Publishing.
+* CoinMarketCap. (2017). Cryptocurrency Market Capitalizations. Retrieved from https://coinmarketcap.com/coins/views/all/
+* Fairley, P. (2017). The Ridiculous Amount of Energy It Takes to Run Bitcoin: Running Bitcoin uses a small city’s worth of electricity. Intel and others want to make a more sustainable blockchain. Retrieved from https://spectrum.ieee.org/energy/policy/the-ridiculous-amount-of-energy-it-takes-torun-bitcoin
+
+### still updating
